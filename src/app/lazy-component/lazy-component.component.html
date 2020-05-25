@@ -1,0 +1,8 @@
+<div *ngIf="isLoading">
+  <p><em>loading lazy-component from {{source}}...</em></p>
+</div>
+
+<div *ngIf="!isLoading">
+  <p>lazy-component from {{source}} is loaded: </p>
+  <pre>{{ response | json }}</pre>
+</div>

@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  Ngx Mat Step Lazy Load
+  <span class="spacer"></span>
+  <a mat-button href="https://github.com/andreivictor/ngx-mat-step-lazy-load/" target="_blank">
+    <img src="../assets/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo">
+    Github
+  </a>
+</mat-toolbar>
+
+<h3 class="mat-subheading-2">
+  Small Angular library that allows to defer rendering the content of the `mat-step` until it is opened for the first time.
+</h3>
+
+<mat-vertical-stepper>
+  <mat-step>
+    <ng-template matStepLabel>Step 1</ng-template>
+    <ngx-mat-step-content-lazy-wrapper>
+      <ng-template ngxMatStepContentLazy>
+        <app-lazy-component source="step 1"></app-lazy-component>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </ngx-mat-step-content-lazy-wrapper>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Step 2</ng-template>
+    <ngx-mat-step-content-lazy-wrapper>
+      <ng-template ngxMatStepContentLazy>
+        <app-lazy-component source="step 2"></app-lazy-component>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </ng-template>
+    </ngx-mat-step-content-lazy-wrapper>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Step 3</ng-template>
+    <p>This content was rendered eagerly</p>
+    <button mat-button matStepperPrevious>Back</button>
+  </mat-step>
+</mat-vertical-stepper>

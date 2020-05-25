@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "mat-step-lazy-load": [
+        "dist/mat-step-lazy-load/mat-step-lazy-load",
+        "dist/mat-step-lazy-load"
+      ],
+      "ngx-mat-step-lazy-load": [
+        "dist/ngx-mat-step-lazy-load/ngx-mat-step-lazy-load",
+        "dist/ngx-mat-step-lazy-load"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}
